@@ -7,7 +7,7 @@ part 'color_change_event.g.dart';
 class const ColorChangeEvent({
   required final String color,
   required final String intensity,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$ColorChangeEventFromJson(json);
 

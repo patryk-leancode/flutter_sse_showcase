@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_sse_showcase/features/examples/wikimedia/wikimedia_change_item.dart';
 
-sealed class const WikimediaState() extends Equatable {
+sealed class const WikimediaState() with Equatable {
   @override
   List<Object?> get props => [];
 }

@@ -5,7 +5,7 @@ import 'package:flutter_sse_showcase/features/examples/standard_http2/standard_h
 import 'package:flutter_sse_showcase/models/api/sse_event.dart';
 import 'package:flutter_sse_showcase/services/sse_service/sse_service.dart';
 
-class StandardHttpExampleCubit2({required final SseService _sseService})
+class StandardHttpExample2Cubit({required final SseService _sseService})
     extends Cubit<StandardHttpExampleState2> {
   this : super(const StandardHttpExampleInitial());
 
@@ -35,8 +35,8 @@ class StandardHttpExampleCubit2({required final SseService _sseService})
         },
         cancelOnError: false,
       );
-    } catch (error) {
-      emit(StandardHttpExampleError(message: error.toString()));
+    } catch (err) {
+      emit(StandardHttpExampleError(message: err.toString()));
     }
   }
 

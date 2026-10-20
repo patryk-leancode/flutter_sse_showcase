@@ -12,9 +12,9 @@ class const StandardHttpExampleScreen2({super.key}) extends StatelessWidget {
   Widget build(BuildContext context) {
     return DepsProvider(
       register: [
-        BlocDependency<StandardHttpExampleCubit2>(
+        BlocDependency<StandardHttpExample2Cubit>(
           (deps, _) =>
-              StandardHttpExampleCubit2(sseService: deps.get<SseService>())
+              StandardHttpExample2Cubit(sseService: deps.get<SseService>())
                 ..startStreaming(),
         ),
       ],
@@ -29,7 +29,7 @@ class const StandardHttpExampleScreen2({super.key}) extends StatelessWidget {
 class const _StandardHttpContent() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<StandardHttpExampleCubit2, StandardHttpExampleState2>(
+    return BlocBuilder<StandardHttpExample2Cubit, StandardHttpExampleState2>(
       builder: (context, state) {
         return Padding(
           padding: const EdgeInsets.all(16),
@@ -40,7 +40,7 @@ class const _StandardHttpContent() extends StatelessWidget {
               if (state is StandardHttpExampleCompleted)
                 ElevatedButton(
                   onPressed: () {
-                    context.get<StandardHttpExampleCubit2>().refreshData();
+                    context.get<StandardHttpExample2Cubit>().refreshData();
                   },
                   child: const Text('Refresh'),
                 ),
@@ -125,7 +125,7 @@ class const _StandardHttpStateContent({
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                context.get<StandardHttpExampleCubit2>().refreshData();
+                context.get<StandardHttpExample2Cubit>().refreshData();
               },
               child: const Text('Retry'),
             ),

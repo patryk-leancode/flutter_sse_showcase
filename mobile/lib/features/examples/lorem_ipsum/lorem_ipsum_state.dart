@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-sealed class const LoremIpsumState() extends Equatable {
+sealed class const LoremIpsumState() with Equatable {
   @override
   List<Object?> get props => [];
 }

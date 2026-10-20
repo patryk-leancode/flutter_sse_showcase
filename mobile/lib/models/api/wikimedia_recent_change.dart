@@ -29,7 +29,7 @@ class const WikimediaRecentChange({
   final int? timestamp,
   final String? user,
   final String? wiki,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$WikimediaRecentChangeFromJson(json);
 
@@ -72,7 +72,7 @@ class const WikimediaRecentChangeMeta({
   @JsonKey(name: 'request_id') final String? requestId,
   required final String stream,
   final String? uri,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$WikimediaRecentChangeMetaFromJson(json);
 
@@ -86,7 +86,7 @@ class const WikimediaRecentChangeMeta({
 class const WikimediaRecentChangeLength({
   @JsonKey(name: 'new') final int? newLength,
   @JsonKey(name: 'old') final int? oldLength,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$WikimediaRecentChangeLengthFromJson(json);
 
@@ -100,7 +100,7 @@ class const WikimediaRecentChangeLength({
 class const WikimediaRecentChangeRevision({
   @JsonKey(name: 'new') final int? newRevision,
   @JsonKey(name: 'old') final int? oldRevision,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$WikimediaRecentChangeRevisionFromJson(json);
 

@@ -8,7 +8,7 @@ class const LoremIpsumChunk({
   required final String chunk,
   @JsonKey(name: 'characters_sent') required final int charactersSent,
   @JsonKey(name: 'characters_remaining') required final int charactersRemaining,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$LoremIpsumChunkFromJson(json);
 

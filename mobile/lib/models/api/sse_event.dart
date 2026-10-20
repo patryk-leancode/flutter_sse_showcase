@@ -4,7 +4,7 @@ class const SseEvent({
   required final String event,
   required final String data,
   final String? id,
-}) extends Equatable {
+}) with Equatable {
   @override
   String toString() => 'SseEvent(id: $id, event: $event, data: $data)';
 

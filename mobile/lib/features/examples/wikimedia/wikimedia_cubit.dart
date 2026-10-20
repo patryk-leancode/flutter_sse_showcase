@@ -44,8 +44,8 @@ class WikimediaCubit({required final SseService _sseService})
         },
         cancelOnError: false,
       );
-    } catch (error) {
-      emit(WikimediaError(message: error.toString()));
+    } catch (err) {
+      emit(WikimediaError(message: err.toString()));
     }
   }
 

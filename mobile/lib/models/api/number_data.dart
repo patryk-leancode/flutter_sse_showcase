@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class const NumberData({required final int value}) extends Equatable {
+class const NumberData({required final int value}) with Equatable {
   factory fromString(String data) {
     return NumberData(value: int.parse(data));
   }

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
-sealed class const ShapesAndColorsState() extends Equatable {
+sealed class const ShapesAndColorsState() with Equatable {
   ShapesAndColorsState copyWith({
     String? shape,
     int? size,

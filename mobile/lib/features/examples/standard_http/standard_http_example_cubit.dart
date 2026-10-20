@@ -50,8 +50,8 @@ class StandardHttpExampleCubit({required final Client _client})
             },
             cancelOnError: false,
           );
-    } catch (error) {
-      emit(StandardHttpExampleError(message: error.toString()));
+    } catch (err) {
+      emit(StandardHttpExampleError(message: err.toString()));
     }
   }
 

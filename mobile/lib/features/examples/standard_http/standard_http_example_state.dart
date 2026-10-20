@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-sealed class const StandardHttpExampleState() extends Equatable {
+sealed class const StandardHttpExampleState() with Equatable {
   @override
   List<Object?> get props => [];
 }

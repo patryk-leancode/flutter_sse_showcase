@@ -58,8 +58,8 @@ class ShapesAndColorsCubit({required final SseService _sseService})
         },
         cancelOnError: false,
       );
-    } catch (error) {
-      emit(ShapesAndColorsError(message: error.toString()));
+    } catch (err) {
+      emit(ShapesAndColorsError(message: err.toString()));
     }
   }
 

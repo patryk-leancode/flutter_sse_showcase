@@ -32,12 +32,7 @@ class const _ShapesAndColorsContent() extends StatelessWidget {
       builder: (context, state) {
         return Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(child: _ShapesAndColorsStateContent(state: state)),
-            ],
-          ),
+          child: _ShapesAndColorsStateContent(state: state),
         );
       },
     );

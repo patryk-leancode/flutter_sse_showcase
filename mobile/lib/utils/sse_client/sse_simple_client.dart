@@ -38,8 +38,8 @@ class SseSimpleClient(final http.Client _client) implements SseClient {
 
         eventBuilder.addLine(line);
       }
-    } catch (error) {
-      throw Exception('SSE streaming error: $error');
+    } catch (err) {
+      throw Exception('SSE streaming error: $err');
     }
   }
 }

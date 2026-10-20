@@ -52,8 +52,8 @@ class LoremIpsumCubit({required final SseService _sseService})
         },
         cancelOnError: false,
       );
-    } catch (error) {
-      emit(LoremIpsumError(message: error.toString()));
+    } catch (err) {
+      emit(LoremIpsumError(message: err.toString()));
     }
   }
 

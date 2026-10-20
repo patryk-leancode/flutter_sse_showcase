@@ -7,7 +7,7 @@ part 'shape_change_event.g.dart';
 class const ShapeChangeEvent({
   required final String shape,
   required final int size,
-}) extends Equatable {
+}) with Equatable {
   factory fromJson(Map<String, dynamic> json) =>
       _$ShapeChangeEventFromJson(json);
 
