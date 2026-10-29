@@ -29,6 +29,7 @@ class SseSimpleClient(final http.Client _client) implements SseClient {
             yield event;
           }
           eventBuilder = SseEventBuilder();
+          continue;
         }
 
         final isComment = line.startsWith(':');
